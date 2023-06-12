@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <a href="" class="logo">
+      <img src="img/logo.jpg" alt="">
+    </a>
+  </header>
+
+  <section>
+    <div class="content">
+      <div class="gs">
+        公式: y = 6.3727x + 49.106
+      </div>
+      <h1 class="title">便携多巴胺含量检测</h1>
+
+      <div class="form">
+        <div><span>R =</span><input id="input" type="text" placeholder="R值"></div>
+        <div><span>浓度 =</span><input id="input2" type="text" placeholder="" disabled>(mmol)</div>
+      </div>
+
+      <div class="num" style="margin-top: 10px;height: 1em;">
+        
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const input = document.querySelector('#input')
+    const input2 = document.querySelector('#input2')
+    const num = document.querySelector('.num')
+    input.addEventListener('keyup', (e) => {
+      // console.log(e)
+      if (13 == e.keyCode) {
+        y = 6.3727 * input.value + 49.106
+        // alert(`y=${y}`)
+        // num.innerText = `检测出的浓度为${y}mmol`
+        input2.value = `${y}`
+        // input.value = ""
+      }
+    })
+  </script>
+
+
+
+  <footer>
+    关爱“老小孩”，助力大健康
+  </footer>
+</body>
+
+</html>
